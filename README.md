@@ -1,12 +1,12 @@
 # tarea_bash_scripting_grupo4
 En este repositorio se encuentran varios scripts interconectados para la realización de un análisis de ChIP-seq: chipepe.sh, chip_proc.sh, input_proc.sh, peak_calling.sh y chip.R. Chipepe.sh es el script principal a partir del cual se redirige al resto de los scripts. En él se comienza el análisis de ChIP-seq, con la descarga y asignación de los distintos parámetros requeridos para el estudio, la creación del espacio de trabajo y la construcción del índice del genoma de referencia. Este script redirigirá las muestras inputs y chips a los script input_proc.sh y chip_proc.sh, respectivamente, para el procesamiento de las mismas. El procesamiento de las muestras incluye el análisis de la calidad y el mapeado al genoma de referencia. Los scripts input_proc.sh y chip_proc.sh, una vez completado el procesamiento de las muestras, redirigirán al script peak_calling.sh, script en el cual se analizarán los picos y se realizará una intersección entre picos comunes. Además, se identificarán los motivos de unión a proteínas mediante la herramienta HOMER. Finalmente, este script termina redirigiendo a un script de Rstudio. En este último script se va a realizar la determinación del reguloma, el análisis de la distribución de los picos en el genoma y de los TSS mediante diferentes gráficos y los análisis de enriquecimiento funcional y metabólico.  
 La ejecución de los scripts requiere únicamente un fichero .txt de parámetros (params.txt). Este fichero de parámetros debe contener la siguiente información:
-  -La ruta de localización del directorio de trabajo (working_directory), es decir, el lugar donde se va a realizar el          análisis.
-  -La ruta de localización del directorio de instalación (installation_directory), que indica el lugar elegido para la          descarga del contenido.
-  -La ruta de localización del genoma (path_genome), que representa el lugar donde se encuentra el genoma que va a              utilizarse en el estudio.
-  -La ruta de localización de la anotación (path_annotation), que representa el lugar donde se encuentra la anotación           del genoma que va a utilizarse en el estudio.
-  -La ruta de localización de las muestras input (path_input), que indica el lugar donde se encuentran los inputs que           van a utilizarse en el análisis.
-  -La ruta de localización de las muestras chip (path_chip), que indica el lugar donde se encuentran las muestras chips que     van a utilizarse en el análisis.
+  -La ruta de localización del directorio de trabajo (working_directory), es decir, el lugar donde se va a realizar el análisis.
+  -La ruta de localización del directorio de instalación (installation_directory), que indica el lugar elegido para la descarga del contenido.
+  -La ruta de localización del genoma (path_genome), que representa el lugar donde se encuentra el genoma que va a utilizarse en el estudio.
+  -La ruta de localización de la anotación (path_annotation), que representa el lugar donde se encuentra la anotación del genoma que va a utilizarse en el estudio.
+  -La ruta de localización de las muestras input (path_input), que indica el lugar donde se encuentran los inputs que van a utilizarse en el análisis.
+  -La ruta de localización de las muestras chip (path_chip), que indica el lugar donde se encuentran las muestras chips que van a utilizarse en el análisis.
   -El nombre que va a dársele al experimento (experiment_name).
   -El universo de cromosomas escogido (universe_chromosome).
   -El número tanto de inputs (number_of_inputs) como de chips (number_of_chips) que tiene el estudio.
