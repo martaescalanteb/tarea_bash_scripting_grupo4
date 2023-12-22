@@ -1,0 +1,12 @@
+path_input: /home/bag2023_4/datos/samples/input
+path_chip: /home/bag2023_4/datos/samples/chip
+path_genome: /home/bag2023_4/datos/genome/chromosome1.fa
+path_annotation: /home/bag2023_4/datos/annotation/chromosome1.gtf
+experiment_name: prr5_grupo4
+working_directory: /home/bag2023_4/prueba
+installation_directory: /home/bag2023_4/prueba
+universe_chromosome: 1
+number_of_inputs: 2
+number_of_chips: 2
+transcription_factor: TRUE
+
